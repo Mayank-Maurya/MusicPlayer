@@ -4,6 +4,7 @@ import android.content.Context
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.example.musicplayer.Player.MusicServiceConnector
 import com.example.musicplayer.R
 import dagger.Module
 import dagger.Provides
@@ -15,6 +16,15 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+
+    @Singleton
+    @Provides
+    fun provideMusicServiceConnection(
+        @ApplicationContext context: Context
+    ) = MusicServiceConnector(context)
+
+
 
     @Singleton
     @Provides
