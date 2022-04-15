@@ -12,6 +12,8 @@ import com.example.musicplayer.data.entities.Song
 import kotlinx.android.synthetic.main.list_item.view.*
 import javax.inject.Inject
 
+
+//song adapter
 class SongAdapter @Inject constructor(
     private val glide : RequestManager
 ) : RecyclerView.Adapter<SongAdapter.SongViewHolder>(){
